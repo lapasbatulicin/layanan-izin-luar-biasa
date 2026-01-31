@@ -68,13 +68,42 @@
         }
 
 @media (max-width: 576px) {
-      .navbar-custom {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+
+    .navbar-custom {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    /* paksa menu tetap horizontal */
+    .navbar-custom .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* cegah teks turun baris */
+    .navbar-custom .nav-link {
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    /* jika layar sempit, bisa geser ke samping */
+    .navbar-custom .container {
+        overflow-x: auto;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .navbar-custom .container::-webkit-scrollbar {
+        display: none; /* Chrome */
+    }
+}
         
     </style>
 </head>
@@ -179,3 +208,4 @@
 </body>
 
 </html>
+
